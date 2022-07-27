@@ -14,3 +14,11 @@ h1 {
 h2 {
     text-align: center;
 }
+
+#reset-button {
+    left: 50%;
+    right: 50%;
+    margin: 5px;
+    width: 50px;
+    text-align: center;
+}

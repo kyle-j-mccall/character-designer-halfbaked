@@ -2,6 +2,7 @@
 const headDropdown = document.getElementById('head-dropdown');
 const middleDropdown = document.getElementById('middle-dropdown');
 const bottomDropdown = document.getElementById('bottom-dropdown');
+const resetButton = document.getElementById('reset-button');
 
 const headEl = document.getElementById('head');
 const middleEl = document.getElementById('middle');
@@ -73,6 +74,15 @@ catchphraseButton.addEventListener('click', () => {
 
 
 });
+
+resetButton.addEventListener('click', () => {
+    catchphrasesEl.textContent = "";
+    reportEl.textContent = "";
+    headEl.style.backgroundImage = '';
+    middleEl.style.backgroundImage = '';
+    bottomEl.style.backgroundImage = '';
+
+})
 
 function displayStats() {
     // text content of the reportEl to tell the user how many times they've changed each piece of the state
