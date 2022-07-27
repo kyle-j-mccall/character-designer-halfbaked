@@ -13,34 +13,34 @@
 </head>
 
 <body>
-
+    <h1>Character Designer</h1>
     <main>
         <div class="left">
             <div class="picker">
                 <label>
                     Head
                     <select id="head-dropdown">
-                        <option value="bird">Bird</option>
-                        <option value="duck">Duck</option>
-                        <option value="dog">Dog</option>
-                        <option value="horse">Horse</option>
+                        <option value="bird-head">Bird</option>
+                        <option value="duck-head">Duck</option>
+                        <option value="dog-head">Dog</option>
+                        <option value="horse-head">Horse</option>
                     </select>
                 </label>
                 <label>
                     Middle
                     <select id="middle-dropdown">
-                        <option value="blue">Blue</option>
-                        <option value="dress">Fancy</option>
-                        <option value="pink">Pink</option>
-                        <option value="red">Red</option>
+                        <option value="blue-middle">Blue</option>
+                        <option value="dress-middle">Fancy</option>
+                        <option value="pink-middle">Pink</option>
+                        <option value="red-middle">Red</option>
                     </select>
                 </label>
                 <label>
                     Bottom
                     <select id="bottom-dropdown">
-                        <option value="leg">Single Leg</option>
-                        <option value="white">White Pants</option>
-                        <option value="blue">Blue Jeans</option>
+                        <option value="leg-pants">Single Leg</option>
+                        <option value="white-pants">White Pants</option>
+                        <option value="blue-pants">Blue Jeans</option>
                     </select>
                 </label>
                 <label>
@@ -48,9 +48,11 @@
                     <input id="catchphrase-input" />
                     <button id="catchphrase-button">Add</button>
                 </label>
+                <button id="reset-button">Reset</button>
             </div>
             <div id="stats">
                 <p id="report"></p>
+                <h2>Catch Phrase</h2>
                 <div id="catchphrases">
                     
                 </div>
@@ -61,8 +63,10 @@
                 <div class="bg head" id="head">
                 </div>
                 <div class="bg middle" id="middle">
+
                 </div>
                 <div class="bg bottom" id="bottom">
+                   
                 </div>
             </div>
             
