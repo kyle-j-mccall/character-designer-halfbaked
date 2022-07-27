@@ -8,6 +8,7 @@ const middleEl = document.getElementById('middle');
 const bottomEl = document.getElementById('bottom');
 
 const reportEl = document.getElementById('report');
+
 const catchphrasesEl = document.getElementById('catchphrases');
 const catchphraseInput = document.getElementById('catchphrase-input');
 const catchphraseButton = document.getElementById('catchphrase-button');
@@ -62,10 +63,14 @@ catchphraseButton.addEventListener('click', () => {
     // get the value of the catchphrase input
     
     // push the new catchphrase to the catchphrase array in state
-
+    catchphrasesArr.push(catchphraseInput.value);
+    console.log(catchphrasesArr);
     // clear out the form input's value so it's empty to the user
-   
+    catchphraseInput.value = "";
+    
     // update the dom to show the new catchphrases (refactor to/call displayCatchphrases to do this work)
+    displayCatchphrases();
+
 
 });
 
@@ -78,9 +83,15 @@ function displayStats() {
 
 function displayCatchphrases() {
     // clear out the DOM for the currently displayed catchphrases
-
+    catchphrasesEl.textContent = "";
     // loop through each catchphrase in state
-   
+    for (let catchphrase of catchphrasesArr) {
+        const catchphraseTag = document.createElement('p');
+
+        catchphraseTag.textContent = catchphrase;
+
+        catchphrasesEl.append(catchphraseTag);
+    }
     // and for each catchphrase
     
     // create an HTML element with the catchphrase as its text content
